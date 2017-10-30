@@ -1,0 +1,1 @@
+DELETE PERSONA_JAIIO where ID_PERSONA in (select (min(ID_PERSONA)) from PERSONA_JAIIO group by DNI  having count(*) > 1);
